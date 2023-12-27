@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'HKVenetian';
+    src: url('assets/typefaces/hk-venetian/HKVenetian-Regular.otf') format('opentype'),
+         url('assets/typefaces/hk-venetian/HKVenetian-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ArefRuqaa';
+    src: url('assets/typefaces/Aref_Ruqaa/ArefRuqaa-Regular.ttf') format('truetype'), 
+         url('assets/typefaces/Aref_Ruqaa/ArefRuqaa-Bold.ttf') format('truetype');
+}
+:root {
+    --icon-color: #041804;
+    --font-color: #041804;
+    --font-color-hover: #152925;
+    --background-color: #E1EAE7;
+    --phi-4: 4.235801032rem;
+
+}
+body {
+    font-family: 'HKVenetian', 'wingdings';
+    padding: 1rem;
+    /* FIXME: cursor not working */
+    /* cursor: url('assets/images/cursor/icons8-carrot-32.png'); */
+    background-color: var(--background-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+li {
+    margin-bottom: .1rem;
+    border-bottom-style: dotted;
+    text-align: center;
+    border-bottom-color: whitesmoke;
+    border-bottom-width: 1rem;
+}
+a {
+    font-family: 'HKVenetian', 'wingdings';
+    color: var(--font-color);
+    font-size: var(--phi-4);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--font-color-hover);
+    font-style: italic;
+    /* FIXME: cursor not working */
+    /* cursor: url('assets/images/cursor/icons8-celery-32.png'), auto; */
+}
+img {
+    height: var(--phi-4);
+    padding-top: .618rem;
+    padding-right: .618rem;
+}
+h1 {
+    /* line-height: 3rem; */
+    font-size: var(--phi-4);
+    font-family: 'ArefRuqaa', 'wingdings';
+    color: var(--icon-color);
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--phi-4);
+}
