@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <script>
+        if (location.protocol !== 'https:') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
     <div class="image-container">
         <img alt="Cabbage" src="assets/logo/icontrans.png">
         <h1>Cruditech</h1>
