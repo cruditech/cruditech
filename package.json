@@ -24,6 +24,7 @@
     "flickity-as-nav-for": "^3.0.0",
     "flickity-fade": "^2.0.0",
     "flickity-imagesloaded": "^2.0.0",
+    "hbs": "^4.2.0",
     "highlight.js": "^11.8.0",
     "http-errors": "^2.0.0",
     "imagesloaded": "^5.0.0",

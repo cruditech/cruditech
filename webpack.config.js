@@ -111,7 +111,7 @@ module.exports = {
       ],
     }),
     new HandlebarsPlugin({
-      entry: path.join(process.cwd(), 'src', 'pews', '**', '*.handlebars'),
+      entry: path.join(process.cwd(), 'src', 'views', '**', '*.handlebars'),
       output: path.join(process.cwd(), 'dist', '[path]', '[name].handlebars'),
       partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,handlebars,svg}')],
       helpers: {
@@ -145,7 +145,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    watchFiles: ['src/pews/**/*', 'src/**/*'],
+    watchFiles: ['src/views/**/*', 'src/**/*'],
   },
   target: 'web',
 };
