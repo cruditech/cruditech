@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const express = require('express');
-const { engine }  = require('express-handlebars');
+// const { engine }  = require('express-handlebars');
 const http = require('http');
 const logger = require('morgan');
 const path = require('path');
@@ -16,9 +16,9 @@ const compiler = webpack(webpackConfig);
 app.set('views', path.join(__dirname, 'src/pews/'));
 app.engine('handlebars', engine({
   defaultLayout: false,
-  // partialsDir: path.join(__dirname, 'src/'),
+
 }));
-app.set('view engine', 'handlebars');
+app.set('view engine', 'exhandlebars');
 app.use(webpackDevMiddleware(compiler, {
   publicPath: webpackConfig.output.publicPath
 }));
