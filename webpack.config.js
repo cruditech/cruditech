@@ -147,5 +147,5 @@ module.exports = {
   devServer: {
     watchFiles: ['src/html/**/*', 'src/partials/**/*'],
   },
-  target: 'node',
+  target: 'web',
 };
