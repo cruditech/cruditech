@@ -1,49 +1,16 @@
 const dotenv = require('dotenv');
 const express = require('express');
-// const { engine }  = require('express-handlebars');
-// const hbs = require('hbs');
 const http = require('http');
 const logger = require('morgan');
 const path = require('path');
 const router = require('./routes/index');
 const { auth } = require('express-openid-connect');
 dotenv.config();
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const webpackConfig = require('./webpack.config.js');
 const app = express();
-const compiler = webpack(webpackConfig);
-app.set('views', path.join(__dirname, 'src', 'views'));
-const { create } = require('express-handlebars');
-const hbs = create({ defaultLayout: false, partialsDir: __dirname + '/src/views/partials' })
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-app.set('port', process.env.PORT || 3000);
-var options = { //dotfiles: 'ignore', etag: false,
-  extensions: ['htm', 'html', 'handlebars'],
-  index: false
-};
-// app.use(express.static(path.join(__dirname, 'public'), options));
-
-// app.engine('handlebars', engine({
-//   defaultLayout: false,
-
-// }));
-// app.set('view engine', 'hbs');
-// app.engine('handlebars', hbs.__express);
-// hbs.registerPartials(__dirname + '/src/views/partials', function (err) {
-//   if (err) {
-//     console.log(err);
-//   }
-// });
-
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: webpackConfig.output.publicPath
-}));
-app.use(webpackHotMiddleware(compiler));
+app.set('views', path.join(__dirname, 'dist'));
+app.set('view engine', 'ejs');
 app.use(logger('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json());
 const config = {
   authRequired: false,

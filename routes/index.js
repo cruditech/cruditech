@@ -2,10 +2,11 @@ var router = require('express').Router();
 const { requiresAuth } = require('express-openid-connect');
 
 router.get('/', function (req, res, next) {
-  res.render('portfolio-masonry', {
-    title: 'Cruditech',
-    isAuthenticated: req.oidc.isAuthenticated()
-  });
+  res.render('portfolio-masonry');
+  // , {
+  //   title: 'Cruditech',
+  //   isAuthenticated: req.oidc.isAuthenticated()
+  // });
 });
 
 router.get('/disclosure', function (req, res, next) {
@@ -25,7 +26,7 @@ router.get('/returns', function (req, res, next) {
 });
 
 router.get('/terms', function (req, res, next) {
-  res.render('terms-of-use', { layout: false, partials: ['**/partials/**']});
+  res.render('terms-of-use');
 });
 
 router.get('/use', function (req, res, next) {

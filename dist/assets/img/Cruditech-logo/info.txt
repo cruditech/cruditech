@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: HKVenetian-Regular
+font link: https://hanken.co/product/hk-venetian/
+font author: Hanken Design Co.
+font author site: https://hanken.co/
+
+
+icon designer: NOVITA ASTRI
+icon designer link: /novitaastri2011
+        
+{"slogan":"#293d39","icon-gradient-0":"#041804","bg":"#E1EAE7","font":"#152925"}
+      

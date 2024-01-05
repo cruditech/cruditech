@@ -79,7 +79,7 @@ module.exports = {
       new TerserPlugin({
         extractComments: false,
         terserOptions: {
-          output: { 
+          output: {
             comments: false,
           },
         },
@@ -111,9 +111,9 @@ module.exports = {
       ],
     }),
     new HandlebarsPlugin({
-      entry: path.join(process.cwd(), 'src', 'views', '**', '*.handlebars'),
-      output: path.join(process.cwd(), 'dist', '[path]', '[name].handlebars'),
-      partials: [path.join(process.cwd(), 'src', 'views', 'partials', '**', '*.{html,handlebars,svg}')],
+      entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
+      output: path.join(process.cwd(), 'dist', '[path]', '[name].ejs'),
+      partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
       helpers: {
         is: function (v1, v2, options) {
           const variants = v2.split(' || ');
@@ -145,7 +145,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    watchFiles: ['src/views/**/*', 'src/**/*'],
+    watchFiles: ['src/html/**/*', 'src/partials/**/*'],
   },
   target: 'node',
 };

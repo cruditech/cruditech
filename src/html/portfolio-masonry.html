@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{> partials/head title="Cruditech"}}
+  </head>
+  <body>
+
+    <!-- MODALS -->
+    {{> partials/modals}}
+
+    <!-- NAVBAR -->
+    {{!-- {{> partials/navbar classList="navbar-dark" container="container" button="primary"}} --}}
+
+    <!-- WELCOME -->
+    <section data-jarallax data-speed=".8" class="pt-12 pt-md-14 pb-12 pb-md-15 overlay overlay-black overlay-60 bg-cover jarallax" style="margin-top: -87px; background-image: url(assets/img/Cruditech-logo/defaultblur.png);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-7 text-center">
+            <img src="{{webRoot}}/assets/img/Cruditech-logo/coverwhite.png" class="img-fluid" alt="Cruditech">
+            <!-- Headin -->
+            {{!-- <h1 class="display-2 fw-bold text-white">
+              Our Work.
+            </h1> --}}
+
+            <!-- Text -->
+            <p class="lead text-white text-opacity-75 mb-4">
+              We design & build products, tools, apps, and sites for companies trying to do great things for our planet.
+            </p>
+
+            <!-- Badges -->
+            <nav class="nav justify-content-center">
+              <a class="badge rounded-pill text-bg-white-subtle active me-1 mb-1" href="#" data-bs-toggle="pill" data-filter="*" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">everything</span>
+              </a>
+              <a class="badge rounded-pill text-bg-white-subtle me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".creativity" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">creativity</span>
+              </a>
+              <a class="badge rounded-pill text-bg-white-subtle me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".entertainment" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">entertainment</span>
+              </a>
+              <a class="badge rounded-pill text-bg-white-subtle me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".monetization" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">monetization</span>
+              </a>
+              <a class="badge rounded-pill text-bg-white-subtle me-1 mb-1" href="#" data-bs-toggle="pill" data-filter=".wellness" data-bs-target="#portfolio">
+                <span class="h6 text-uppercase">wellness</span>
+              </a>
+            </nav>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x text-light">
+        {{> curves/curve-1}}
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <section class="py-8 py-md-11 mt-n10 mt-md-n14">
+      <div class="container">
+        <div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
+          <div class="col-12 col-md-4 wellness">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://allosta.tech" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/allostatech.png" alt="Allostatech">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Allostatic Technology</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Measure chronic stress.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 wellness">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://calcu.live" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/calculive.png" alt="CalcuLive">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Healthy Living</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Medication and supplement management.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 creativity">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://collage.quest" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/collage-quest.png" alt="Collage Quest">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Visual Art</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Assemble pics and patterns into nice designs that can be ordered on apparel and merchanise.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 monetization">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://grocerystyle.com" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/grocery-style.png" alt="Grocery Style">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Customer Insights</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">CCTV from grocery stores to understand patron behavior.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 monetization">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://instaca.sh" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/instacash.png" alt="InstaCash">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Brand Partnership</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Connect brands with instagram influencers to scale grassroots campaigns through micro-payments.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 creativity">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://soundsieve.com" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/sound-sieve.png" alt="Sound Sieve">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Music Production</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Granular sampling through surgical instrument and acapella extraction.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 entertainment">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://wags.top" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/wag-stop.png" alt="Wag Stop">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Domesticated Fun</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Catch the bug in this touchscreen game for your furry friend.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+          <div class="col-12 col-md-4 entertainment">
+
+            <!-- Card -->
+            <a class="card shadow-light-lg mb-7" href="https://wordwadweb.com" target="_blank">
+
+              <!-- Image -->
+              <div class="card-zoom">
+                <img class="card-img" src="assets/img/portfolio/word-wad-web.png" alt="Word Wad Web">
+              </div>
+
+              <!-- Overlay -->
+              <div class="card-img-overlay card-img-overlay-hover">
+                <div class="card-body bg-white">
+
+                  <!-- Shape -->
+                  <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                    {{> curves/curve-1}}
+                  </div>
+
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase mb-1 text-body-secondary">Tech Reading</h6>
+
+                  <!-- Heading -->
+                  <h4 class="mb-0">Web technology and business content for the exceedingly bored.</h4>
+
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x text-gray-200">
+        {{> curves/curve-1}}
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    {{> partials/footer classList="bg-gray-200"}}
+
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
+
+  </body>
+</html>
