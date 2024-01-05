@@ -14,7 +14,18 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackConfig = require('./webpack.config.js');
 const app = express();
 const compiler = webpack(webpackConfig);
-// app.set('views', path.join(__dirname, 'src/views/'));
+app.set('views', path.join(__dirname, 'src', 'views'));
+const { create } = require('express-handlebars');
+const hbs = create({ defaultLayout: false, partialsDir: __dirname + '/src/views/partials' })
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.set('port', process.env.PORT || 3000);
+var options = { //dotfiles: 'ignore', etag: false,
+  extensions: ['htm', 'html', 'handlebars'],
+  index: false
+};
+// app.use(express.static(path.join(__dirname, 'public'), options));
+
 // app.engine('handlebars', engine({
 //   defaultLayout: false,
 
@@ -49,15 +60,6 @@ if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.
 app.use(auth(config));
 
 
-var {exphbs} = require('express-handlebars'); 
-app.engine('handlebars', 
-exphbs({defaultLayout: 'none'})); app.set('view engine', 'handlebars');
-app.set('port', process.env.PORT || 3000);
-var options = { //dotfiles: 'ignore', etag: false,
-extensions: ['htm', 'html', 'handlebars'],
-index: false
-};
-app.use(express.static(path.join(__dirname, 'public') , options  ));
 
 
 // Middleware to make the `user` object available for all views

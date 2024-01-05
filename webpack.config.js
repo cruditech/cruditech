@@ -113,7 +113,7 @@ module.exports = {
     new HandlebarsPlugin({
       entry: path.join(process.cwd(), 'src', 'views', '**', '*.handlebars'),
       output: path.join(process.cwd(), 'dist', '[path]', '[name].handlebars'),
-      partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,handlebars,svg}')],
+      partials: [path.join(process.cwd(), 'src', 'views', 'partials', '**', '*.{html,handlebars,svg}')],
       helpers: {
         is: function (v1, v2, options) {
           const variants = v2.split(' || ');
@@ -147,5 +147,5 @@ module.exports = {
   devServer: {
     watchFiles: ['src/views/**/*', 'src/**/*'],
   },
-  target: 'web',
+  target: 'node',
 };

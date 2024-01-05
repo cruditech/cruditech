@@ -25,7 +25,7 @@ router.get('/returns', function (req, res, next) {
 });
 
 router.get('/terms', function (req, res, next) {
-  res.render('terms-of-use');
+  res.render('terms-of-use', { layout: false, partials: ['**/partials/**']});
 });
 
 router.get('/use', function (req, res, next) {

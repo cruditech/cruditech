@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <%- include('head', { title="Cruditech"} ) %>
+  {{> 'head' title="Cruditech" }}
 </head>
 
 <body class="bg-light">
 
   <!-- MODALS -->
-  <%- include('modals') %>
+  {{> modals }}
 
   <!-- NAVBAR -->
-  <%- include('navbar', { classList="bg-white border-bottom" container="container-fluid" button="primary" } ) %>
+  {{> navbar classList="bg-white border-bottom" container="container-fluid" button="primary" }}
 
   <!-- CONTENT -->
   <section class="pt-8 pt-md-11 pb-8 pb-md-14">
@@ -2412,7 +2412,7 @@ Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;"><strong>
   <!-- SHAPE -->
   <div class="position-relative">
     <div class="shape shape-bottom shape-fluid-x text-dark">
-      <%- include('shapes/curves/curve-1') %>
+      {{> shapes/curves/curve-1 }}
     </div>
   </div>
 
