@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "description": "",
   "scripts": {
-    "startpack": "webpack serve --open",
+    "startpack": "doppler run -- webpack serve --open",
     "build": "del-cli dist && webpack --mode production"
   },
   "dependencies": {
